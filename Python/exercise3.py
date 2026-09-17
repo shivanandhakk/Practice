@@ -1,16 +1,30 @@
-import math
-#Circumference of a circle
-radius =float(input("Enter the Radius of a circle:"))
-circumference = 2 * math.pi * radius
-print(f"The circumference of a Circle is: {round(circumference, 2)}")
+# Python Calculator
+operator = input("Enter an operator (+, -, *, /): ")
+num1 = int(input("Enter the 1st number: "))
+num2 = int(input("Enter the 2nd number: "))
+if operator == '+':
+    result = num1 + num2
+    print(result)
+elif operator == '-':
+    result = num1 - num2
+    print(result)
+elif operator == '*':
+    result = num1 * num2
+    print(result)
+elif operator == '/':
+    result = num1 / num2
+    print(result)
+else:
+    print(f"{operator} is not a valid operator.")
 
-#Area of a circle
-radius = float(input("Enter the Radius of a circle:"))
-area = math.pi * radius ** 2
-print(f"The Area of a Circle is: {round(area, 2)}")
-
-#Hypotenuse of a right triangle
-base = float(input("Enter the base of a right triangle:"))
-height = float(input("Enter the height of a right triangle:"))
-hypotenuse = math.sqrt(base ** 2 + height ** 2)
-print(f"Hypotenuse of a right triangle: {round(hypotenuse, 2)}")
+#Temperature Conversion Program
+temp = float(input("Enter the temperature: "))
+unit = input("Is this temperature in Celsius or Fahrenheit (C/F): ")
+if unit == 'C':
+    fahrenheit = (temp * 9/5) + 32
+    print(f"The temperature in Fahrenheit is: {fahrenheit}F")
+elif unit == 'F':
+    celsius = (temp - 32) * 5/9
+    print(f"The temperature in Celsius is: {celsius}C")
+else:
+    print("Invalid unit. Please enter 'C' or 'F'.")
